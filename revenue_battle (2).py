@@ -49,8 +49,7 @@ def display_str_report(report):
 
 # Decision making
 def get_player_decision():
-    print("
-What would you like to do this week?")
+    print("What would you like to do this week?")
     print("1. Increase rates by 10%")
     print("2. Decrease rates by 10%")
     print("3. Launch a weekend promotion")

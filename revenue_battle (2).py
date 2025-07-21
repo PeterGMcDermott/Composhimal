@@ -11,8 +11,7 @@ def print_title():
   \____\___/|_| |_| |_| .__/ \___/|___/_| |_|_|_| |_| |_|\__,_|_|
                       |_|                                        
     """)
-    print("Welcome to Courtyard Revenue Manager!
-")
+    print("Welcome to Courtyard Revenue Manager!")
 
 # STR Report simulation
 def generate_str_report(level):

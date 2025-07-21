@@ -44,8 +44,7 @@ def evil_competitor_action(level):
 
 # Display STR report
 def display_str_report(report):
-    print("
-📊 Weekly STR Report:")
+    print("📊 Weekly STR Report:")
     for key, value in report.items():
         print(f"  {key}: {value}")
 
@@ -92,24 +91,20 @@ def play_game():
     levels = 5
 
     for level in range(1, levels + 1):
-        print(f"
-🏨 Level {level} - Week {level}")
+        print(f"🏨 Level {level} - Week {level}")
         report = generate_str_report(level)
         display_str_report(report)
 
         competitor_action, impact = evil_competitor_action(level)
-        print(f"
-😈 Evil Competitor {competitor_action}! (Impact: -{impact}% occupancy)")
+        print(f"😈 Evil Competitor {competitor_action}! (Impact: -{impact}% occupancy)")
 
         owner_goal = report["RevPAR"] + random.randint(5, 15)
-        print(f"
-📢 Owner expects a RevPAR of at least {owner_goal:.2f} this week!")
+        print(f"📢 Owner expects a RevPAR of at least {owner_goal:.2f} this week!")
 
         decision = get_player_decision()
         outcome = apply_decision(report, decision, impact)
 
-        print("
-📈 Outcome after your decision:")
+        print("📈 Outcome after your decision:")
         for key, value in outcome.items():
             print(f"  {key}: {value}")
 
@@ -122,19 +117,15 @@ def play_game():
         time.sleep(1)
 
     avg_revpar = round(total_revpar / levels, 2)
-    print("
-🏁 Final Boss Battle!")
+    print("🏁 Final Boss Battle!")
     print("To win, your average RevPAR must beat the market and the evil competitor!")
 
     if avg_revpar > 140:
-        print(f"
-🎉 You win! Your average RevPAR was {avg_revpar}. You're a Revenue Legend!")
+        print(f"🎉 You win! Your average RevPAR was {avg_revpar}. You're a Revenue Legend!")
     elif avg_revpar > 120:
-        print(f"
-👍 Solid performance! Your average RevPAR was {avg_revpar}.")
+        print(f"👍 Solid performance! Your average RevPAR was {avg_revpar}.")
     else:
-        print(f"
-📉 You lost the battle. Your average RevPAR was {avg_revpar}. Try again!")
+        print(f"📉 You lost the battle. Your average RevPAR was {avg_revpar}. Try again!")
 
 # Run the game
 if __name__ == "__main__":
